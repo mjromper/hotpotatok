@@ -4,8 +4,6 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
   // opentok:
@@ -44,8 +42,6 @@ app.get('/', function(req, res){
 
   res.render('index', { title: 'Hot Potato', token: _token, sessionId: _sessionId, apikey: OPENTOK_API_KEY });
 });
-
-app.get('/users', user.list);
 
 
 
