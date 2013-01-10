@@ -1,0 +1,15 @@
+extends layout
+
+block append head
+  script(type='text/javascript')
+      var apikey='#{apikey}';
+      var sessionId='#{sessionId}';
+      var token='#{token}';
+       
+  script(src='/javascripts/opentok-client.js')
+
+block content
+  h1= title
+  p Welcome to #{title} conference system
+  div#myStream
+  div#streamsContainer
